@@ -43,10 +43,8 @@ INSTALLED_APPS = [
     'django_comments',
     'mptt',
     'tagging',
-    'zinnia_bootstrap',
-    'zinnia',
-    
     'blog.apps.BlogConfig',
+    'zinnia',
 ]
 
 MIDDLEWARE = [
