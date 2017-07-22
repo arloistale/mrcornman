@@ -27,17 +27,26 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Zinnia
+SITE_ID = 1
 
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',    
+    'django_comments',
+    'mptt',
+    'tagging',
+    'zinnia_bootstrap',
+    'zinnia',
+    
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -56,13 +65,17 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
+            ],
+            'loaders': [
+                'app_namespace.Loader',
+                'django.template.loaders.app_directories.Loader',
             ],
         },
     },
