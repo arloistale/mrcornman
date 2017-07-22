@@ -51,23 +51,6 @@
             mrcornman
           </a>
         </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            {% url 'zinnia:sitemap' as sitemap_url %}
-            <li {% if sitemap in request.path %}class="active"{% endif %}>
-            <li>
-              <a href="{{ sitemap_url }}" title="{% trans "Sitemap" %}" class="sitemap">
-                {% trans "Sitemap" %}
-              </a>
-            </li>
-            <li class="divider-vertical"></li>
-            <li>
-              <a href="{% url 'zinnia:entry_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
-                {% trans "RSS Feed" %}
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     {% block slider %}{% endblock %}
