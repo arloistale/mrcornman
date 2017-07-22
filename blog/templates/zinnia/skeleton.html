@@ -3,10 +3,10 @@
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
     <meta charset="utf-8">
-    <title>Zinnia's Weblog - {% block title %}{% endblock title %}{% block title-page %}{% endblock title-page %}</title>
+    <title>mrcornman</title>
     <meta name="robots" content="follow, all" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{% block meta-description %}{% trans "Just another Zinnia weblog." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
+    <meta name="description" content="{% block meta-description %}{% trans "Welcome to the website of Jonathan, or mrcornman." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
     <meta name="keywords" content="{% block meta-keywords %}django, blog, weblog, zinnia{% endblock meta-keywords %}" />
     <meta name="author" content="Fantomas42" />
     {% block meta %}{% endblock meta %}
@@ -47,33 +47,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img src="{% static "zinnia_bootstrap/img/zinnia.png" %}" class="pull-left" alt="Zinnia's Weblog" />
           <a href="{% url 'zinnia:entry_archive_index' %}" title="Zinnia's Welog" class="navbar-brand" rel="home">
-            Zinnia's Weblog
+            mrcornman
           </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav navbar-left">
-            {% url 'zinnia:category_list' as category_list_url %}
-            <li {% if category_list_url in request.path %}class="active"{% endif %}>
-              <a href="{{ category_list_url }}" title="{% trans "Category list" %}">
-                {% trans "Categories" %}
-              </a>
-            </li>
-            {% url 'zinnia:author_list' as author_list_url %}
-            <li {% if author_list_url in request.path %}class="active"{% endif %}>
-              <a href="{{ author_list_url }}" title="{% trans "Author list" %}">
-                {% trans "Authors" %}
-              </a>
-            </li>
-            {% url 'zinnia:tag_list' as tag_list_url %}
-            <li {% if tag_list_url in request.path %}class="active"{% endif %}>
-              <a href="{{ tag_list_url }}" title="{% trans "Tag list" %}">
-                {% trans "Tags" %}
-              </a>
-            </li>
-            <li class="divider-vertical"></li>
-          </ul>
           <form method="get" action="{% url 'zinnia:entry_search' %}" class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="search-query form-control" placeholder="{% trans 'Search' %}" name="pattern" value="{{ pattern }}" />
