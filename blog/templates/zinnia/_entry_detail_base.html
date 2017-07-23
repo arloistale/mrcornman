@@ -62,19 +62,7 @@
   {% endblock entry-body %}
 
   {% block entry-footer %}
-  <footer class="entry-footer well">
-    {% block entry-tags %}
-    <p class="entry-tags">
-      <span class="glyphicon glyphicon-tags"></span> <strong>{% trans "Tags" %}</strong> :
-      {% for tag in object.tags_list %}
-      <a href="{% url 'zinnia:tag_detail' tag %}"
-         title="{% blocktrans %}Show all entries tagged by {{ tag }}{% endblocktrans %}"
-         rel="tag">{{ tag }}</a>
-      {% empty %}
-      <span>{% trans "No tags" %}</span>
-      {% endfor %}
-    </p>
-    {% endblock entry-tags %}
+  <footer class="entry-footer">
   </footer>
   {% endblock entry-footer %}
 </article>
