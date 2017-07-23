@@ -7,12 +7,15 @@
     <meta name="robots" content="follow, all" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="{% block meta-description %}{% trans "Welcome to the website of Jonathan AKA mrcornman." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
-    <meta name="keywords" content="{% block meta-keywords %}django, blog, weblog, zinnia{% endblock meta-keywords %}" />
-    <meta name="author" content="Fantomas42" />
+    <meta name="keywords" content="{% block meta-keywords %}corn, mrcornman,
+    corny, django, blog, weblog, zinnia{% endblock meta-keywords %}" />
+    <meta name="author" content="Jonathan Lu" />
     {% block meta %}{% endblock meta %}
     <link rel="pingback" href="/xmlrpc/" />
     <link rel="home" href="{% url 'zinnia:entry_archive_index' %}" />
-    <link rel="stylesheet" href="{% static "blog/bootstrap/css/bootstrap.min.css" %}" />
+    {% with style_sheet='/blog/bootstrap/css/'|add:'Lumen'|add:'/bootstrap.min.css' %}
+    <link rel="stylesheet" href="{% static style_sheet %}" />
+    {% endwith %}
     <style type="text/css">
       body {
         padding-top: 70px;
@@ -40,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="{% url 'zinnia:entry_archive_index' %}" title="Zinnia's Welog" class="navbar-brand" rel="home">
+          <a href="{% url 'zinnia:entry_archive_index' %}" title="mrcornman" class="navbar-brand" rel="home">
             mrcornman
           </a>
         </div>
