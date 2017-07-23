@@ -12,21 +12,21 @@
     {% block meta %}{% endblock meta %}
     <link rel="pingback" href="/xmlrpc/" />
     <link rel="home" href="{% url 'zinnia:entry_archive_index' %}" />
-    <link rel="stylesheet" href="{% static "zinnia_bootstrap/bootstrap/css/bootstrap.min.css" %}" />
+    <link rel="stylesheet" href="{% static "blog/bootstrap/css/bootstrap.min.css" %}" />
     <style type="text/css">
       body {
         padding-top: 70px;
       }
     </style>
     <!--[if lt IE 9]>
-        <script src="{% static "zinnia_bootstrap/assets/js/html5shiv.js" %}"></script>
-        <script src="{% static "zinnia_bootstrap/assets/js/respond.min.js" %}"></script>
+        <script src="{% static "blog/assets/js/html5shiv.js" %}"></script>
+        <script src="{% static "blog/assets/js/respond.min.js" %}"></script>
     <![endif]-->
     <link rel="shortcut icon" href="{% static "zinnia/theme/img/favicon.ico" %}" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "zinnia_bootstrap/assets/ico/apple-touch-icon-144-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "zinnia_bootstrap/assets/ico/apple-touch-icon-114-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "zinnia_bootstrap/assets/ico/apple-touch-icon-72-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" href="{% static "zinnia_bootstrap/assets/ico/apple-touch-icon-57-precomposed.png" %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "blog/assets/ico/apple-touch-icon-144-precomposed.png" %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "blog/assets/ico/apple-touch-icon-114-precomposed.png" %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "blog/assets/ico/apple-touch-icon-72-precomposed.png" %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static "blog/assets/ico/apple-touch-icon-57-precomposed.png" %}" />
     {% block link %}{% endblock link %}
     {% block script %}{% endblock script %}
   </head>
@@ -80,7 +80,7 @@
     </div>
     <footer class="container">
     </footer>
-    <script type="text/javascript" src="{% static "zinnia_bootstrap/assets/js/jquery.js" %}"></script>
-    <script type="text/javascript" src="{% static "zinnia_bootstrap/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "blog/assets/js/jquery.js" %}"></script>
+    <script type="text/javascript" src="{% static "blog/bootstrap/js/bootstrap.min.js" %}"></script>
   </body>
 </html>
