@@ -6,17 +6,13 @@ Django==1.11.3
 django-app-namespace-template-loader==0.4.1
 django-blog-zinnia==0.18.1
 django-contrib-comments==1.8.0
-django-cornylibs==0.0.1
-django-mingus==0.9.7
 django-mptt==0.8.7
 django-tagging==0.4.5
 django-xmlrpc==0.1.7
 gunicorn==19.7.1
-Markdown==2.6.6
 mercurial==4.2.2
 mots-vides==2015.5.11
 olefile==0.44
-PIL==1.1.7
 Pillow==4.2.1
 pyparsing==2.2.0
 pytz==2017.2
