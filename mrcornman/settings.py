@@ -16,15 +16,22 @@ import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2c%3f9uy-g&_pw39&knbsc)+w73)_eb%0$axvyf+00(v4q4bks'
+try:
+    SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+except KeyError:
+    SECRET_KEY = '2c%3f9uy-g&_pw39&knbsc)+w73)_eb%0$axvyf+00(v4q4bks'
+    print "Please define secret key environment variable."
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+try:
+    DEBUG = os.environ['DJANGO_DEBUG'] == 'True'
+except KeyError:
+    DEBUG = True
+    print "Please define debug environment variable. Defaulting to true."
 
 ALLOWED_HOSTS = [
     # local
