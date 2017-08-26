@@ -30,8 +30,7 @@ except KeyError:
 try:
     DEBUG = os.environ['DJANGO_DEBUG'] == 'True'
 except KeyError:
-    DEBUG = True
-    print "Please define debug environment variable. Defaulting to true."
+    raise ValueError("DJANGO_DEBUG environ var must be defined")
 
 ALLOWED_HOSTS = [
     # local
