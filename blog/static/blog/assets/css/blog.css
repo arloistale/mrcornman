@@ -1,3 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,700');
+
+body,
+html {
+    height: 100%
+}
+html {
+    -webkit-overflow-scrolling: touch
+}
+.prettyprint {
+    display: none
+}
+:focus {
+    outline: 0 !important
+}
+::selection {
+    background: #b371a2;
+    color: #fff
+}
+::-moz-selection {
+    background: #b371a2;
+    color: #fff
+}
+
 body {
-    padding-top: 70px;
+	font-family: 'Cabin', sans-serif;
+    color: #333;
+    background: #fffff4;
+    font-size: 18px;
+    line-height: 150%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    height: auto !important;
+}
+
+.navbar {
+    background-color: #FFEB3B;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 34px;
+}
+
+a {
+    color: #333
+}
+a:hover,
+a:focus {
+    color: #1ABB9C
 }
