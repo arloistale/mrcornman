@@ -3,7 +3,7 @@
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
     <meta charset="utf-8">
-    <title>mrcornman</title>
+    <title>mrcornman.com</title>
     <meta name="robots" content="follow, all" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="{% block meta-description %}{% trans "Welcome to the website of Jonathan AKA mrcornman." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
@@ -31,15 +31,10 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">{% trans "Toggle navigation" %}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="{% url 'zinnia:entry_archive_index' %}" title="mrcornman" class="navbar-brand" rel="home">
-            mrcornman
+          <a href="{% url 'zinnia:entry_archive_index' %}" title="mrcornman" rel="home">
+            mrcornman.com
           </a>
+          <p>(my IRL name is Jonathan Lu)</p>
         </div>
       </div>
     </nav>

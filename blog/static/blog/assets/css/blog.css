@@ -51,7 +51,32 @@ a:focus {
 }
 
 .navbar {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size: 42px;
     background-color: #FFEB3B;
+}
+
+.navbar-header {
+    float: left;
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-header a {
+	font-weight: bold;
+	color: #555;
+}
+
+.navbar-header p {
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.navbar-brand {
+	float:none;
 }
 
 @media (min-width: 992px) {
