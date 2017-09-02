@@ -108,6 +108,11 @@ a:focus {
 
 .entry-body {
 	padding-top: 16px;
+	line-height: 1.6;
+}
+
+.entry-body p {
+	max-width: 100%;
 }
 
 #content {
