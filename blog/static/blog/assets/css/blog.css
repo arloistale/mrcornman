@@ -75,6 +75,11 @@ a:focus {
 	text-transform: uppercase;
 }
 
+.container {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
 .navbar-brand {
 	float:none;
 }
