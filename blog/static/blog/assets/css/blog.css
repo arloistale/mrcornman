@@ -123,3 +123,16 @@ a:focus {
 #content {
 	padding-top: 42px;
 }
+
+.pagination-custom {
+    width: 100%;
+    padding-bottom: 64px;
+}
+
+.page-previous {
+    float: left;
+}
+
+.page-next {
+    float: right;
+}
