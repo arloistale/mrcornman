@@ -6,9 +6,9 @@
     <title>mrcornman.com</title>
     <meta name="robots" content="follow, all" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{% block meta-description %}{% trans "Welcome to the website of Jonathan AKA mrcornman." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
+    <meta name="description" content="{% block meta-description %}{% trans "My real name is Jonathan Lu." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
     <meta name="keywords" content="{% block meta-keywords %}corn, mrcornman,
-    corny, django, blog, weblog, zinnia{% endblock meta-keywords %}" />
+    corny, django, blog, weblog{% endblock meta-keywords %}" />
     <meta name="author" content="Jonathan Lu" />
     {% block meta %}{% endblock meta %}
     <link rel="pingback" href="/xmlrpc/" />
@@ -19,11 +19,7 @@
         <script src="{% static "blog/assets/js/html5shiv.js" %}"></script>
         <script src="{% static "blog/assets/js/respond.min.js" %}"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="{% static "zinnia/theme/img/favicon.ico" %}" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "blog/assets/ico/apple-touch-icon-144-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "blog/assets/ico/apple-touch-icon-114-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "blog/assets/ico/apple-touch-icon-72-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" href="{% static "blog/assets/ico/apple-touch-icon-57-precomposed.png" %}" />
+    <link rel="shortcut icon" href="{% static "favicon.ico" %}" />
     {% block link %}{% endblock link %}
     {% block script %}{% endblock script %}
   </head>
