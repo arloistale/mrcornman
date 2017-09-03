@@ -3,7 +3,7 @@
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
     <meta charset="utf-8">
-    <title>mrcornman</title>
+    <title>mrcornman.com</title>
     <meta name="robots" content="follow, all" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="{% block meta-description %}{% trans "Welcome to the website of Jonathan AKA mrcornman." %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
@@ -13,12 +13,8 @@
     {% block meta %}{% endblock meta %}
     <link rel="pingback" href="/xmlrpc/" />
     <link rel="home" href="{% url 'zinnia:entry_archive_index' %}" />
-    <link rel="stylesheet" href="{% static 'blog/bootstrap/css/Lumen/bootstrap.min.css' %}" />
-    <style type="text/css">
-      body {
-        padding-top: 70px;
-      }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blog/assets/css/blog.css' %}" />
     <!--[if lt IE 9]>
         <script src="{% static "blog/assets/js/html5shiv.js" %}"></script>
         <script src="{% static "blog/assets/js/respond.min.js" %}"></script>
@@ -35,22 +31,16 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">{% trans "Toggle navigation" %}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="{% url 'zinnia:entry_archive_index' %}" title="mrcornman" class="navbar-brand" rel="home">
-            mrcornman
+          <a href="{% url 'zinnia:entry_archive_index' %}" title="mrcornman" rel="home">
+            mrcornman.com
           </a>
+          <p>(my IRL name is Jonathan Lu)</p>
         </div>
       </div>
     </nav>
     <div class="container">
       <div class="row">
-        <div id="content" class="hfeed col-xs-12 col-sm-8 col-md-8 col-lg-8">
-          {% block breadcrumbs %}{% endblock %}
+        <div id="content" class="hfeed">
           {% block content %}
           <div class="links">
             <h3>{% trans "Useful links" %}</h3>
@@ -67,13 +57,9 @@
               </li>
             </ul>
           </div>
-          <div class="search">
-            <h3>{% trans "Search" %}</h3>
-            {% include "zinnia/tags/search_form.html" %}
-          </div>
           {% endblock content %}
         </div>
-        <div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="display:none;">
           {% block sidebar %}
           {% endblock sidebar %}
         </div>
@@ -81,7 +67,7 @@
     </div>
     <footer class="container">
     </footer>
-    <script type="text/javascript" src="{% static "blog/assets/js/jquery.js" %}"></script>
-    <script type="text/javascript" src="{% static "blog/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
 </html>

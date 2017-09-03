@@ -8,15 +8,14 @@
         {{ object.title|widont }}
       </a>
     {% endblock entry-title %}
+    </h2>
     {% block entry-info %}
-      <br />
-      <small class="entry-info">
+      <span class="entry-info">
         {% block entry-published %}
         <time class="published" datetime="{{ object.publication_date|date:"c" }}" pubdate="pubdate">{{ object.publication_date|date:"DATE_FORMAT" }}</time>
         {% endblock entry-published %}
-      </small>
+      </span>
     {% endblock entry-info %}
-    </h2>
     {% block entry-last-update %}
     <p class="entry-last-update" style="display: none;">
       {% trans "Last update on" %} <time class="updated" datetime="{{ object.last_update|date:"c" }}">{{ object.last_update|date:"DATE_FORMAT" }}</time>.
@@ -52,8 +51,8 @@
     <p class="continue-reading">
       <a href="{{ object.get_absolute_url }}"
          title="{% blocktrans with object=object.title percent=object_content.remaining_percent|floatformat:0 %}{{ percent }}% of {{ object }} still remains to read.{% endblocktrans %}"
-         rel="bookmark" class="btn btn-primary">
-        {% trans "Continue reading" %}
+         rel="bookmark">
+        {% trans "Read more..." %}
       </a>
     </p>
     {% endif %}
