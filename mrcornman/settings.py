@@ -45,6 +45,7 @@ ALLOWED_HOSTS = [
 
 # Zinnia
 SITE_ID = 1
+ZINNIA_MARKUP_LANGUAGE = 'markdown'
 
 # Application definition
 

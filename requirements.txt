@@ -10,6 +10,7 @@ django-mptt==0.8.7
 django-tagging==0.4.5
 django-xmlrpc==0.1.7
 gunicorn==19.7.1
+Markdown==2.6.6
 mercurial==4.2.2
 mots-vides==2015.5.11
 olefile==0.44
