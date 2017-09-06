@@ -38,7 +38,6 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 
     # prod
-    '.herokuapp.com',
     'www.mrcornman.com',
     'mrcornman.com'
 ]
