@@ -42,6 +42,12 @@ ALLOWED_HOSTS = [
     'mrcornman.com'
 ]
 
+# Google Analytics
+
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-106333920-1'
+
+GOOGLE_ANALYTICS_DOMAIN = 'mycornman.com'
+
 # Zinnia
 SITE_ID = 2
 ZINNIA_MARKUP_LANGUAGE = 'markdown'
@@ -89,6 +95,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
+                'blog.context_processors.google_analytics',
             ],
             'loaders': [
                 'app_namespace.Loader',
