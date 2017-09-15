@@ -119,6 +119,11 @@ a:focus {
 	max-width: 100%;
 }
 
+.entry-body h1, .entry-body h2, .entry-body h3, .entry-body h4, .entry-body h5, .entry-body h6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 #content {
 	padding-top: 42px;
 }
