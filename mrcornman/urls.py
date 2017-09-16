@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.flatpages import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^', include('zinnia.urls')),
-
     url(r'^comments/', include('django_comments.urls')),
+
+    url(r'^links/$', views.flatpage, {'url': '/links/'}, name='links'),
 ]
