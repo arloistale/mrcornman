@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^', include('zinnia.urls')),
     url(r'^comments/', include('django_comments.urls')),
 
-    url(r'^portfolio/$', views.flatpage, {'url': '/portfolio/'}, name='portfolio'),
+    url(r'^links/$', views.flatpage, {'url': '/links/'}, name='links'),
 ]
